@@ -15,7 +15,7 @@ cross.addEventListener("click", ( ) => {
     black.classList.remove("active");
     document.body.classList.remove("stop-scroll")
 });
-/*
+
 window.onload = couponload()
 
 function couponload(){
@@ -31,7 +31,7 @@ function couponclose(){
     // document.querySelector(".productp").style.opacity = '0.4'
     document.body.classList.remove("stop-scroll")
 };
- */
+
 let body = document.querySelector('body');
 let dark_mode_btn = document.querySelector('.dark_mode_btn');
 let dark_mode_status = false;            
