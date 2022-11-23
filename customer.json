@@ -1,5 +1,5 @@
-{
-    "customers":[
+db.customer.insert(
+    [
       { 
       "id":"4564s1",
       "name":"balu",
@@ -31,4 +31,4 @@
         "ph.no":"781467",
       },
     ]
-    }
+)

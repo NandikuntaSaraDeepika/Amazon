@@ -1,0 +1,45 @@
+db.customerorder.insert(
+    [  
+       { 
+            "payment_method":"Phonepe",
+            "status":"pending",
+            "date_order_placed":"10/11/2016",
+            "date_order_paid":"10/11/2016",
+            "price":"500/-",
+            "Items":"books",
+       },
+       { 
+            "payment_method":"Paytm",
+            "status":"delivered",
+            "date_order_placed":"10/11/2017",
+            "date_order_paid":"10/11/2017",
+            "price":"5000/-",
+            "Items":"mobile",
+       },
+       { 
+            "payment_method":"pay_on_delivery",
+            "status":"delivered",
+            "date_order_placed":"19/01/2016",
+            "date_order_paid":"23/01/2016",
+            "price":"100/-",
+            "Items":"cloths",
+       },
+       { 
+            "payment_method":"Phonepe",
+            "status":"pending",
+            "date_order_placed":"10/03/2018",
+            "date_order_paid":"10/03/2018",
+            "price":"150/-",
+            "Items":"books",
+       },
+       { 
+            "payment_method":"paytm",
+            "status":"pending",
+            "date_order_placed":"18/11/2016",
+            "date_order_paid":"18/11/2016",
+            "price":"600/-",
+            "Items":"books",
+       },
+    ]
+
+)

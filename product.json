@@ -1,5 +1,5 @@
-{
-    "products":[
+db.product.insert(
+    [
       { 
       "product_id":"4000D1",
       "supplier_id":"8889S1",
@@ -31,4 +31,4 @@
         "Product_category":"Groceries",
       },
     ]
-    }
+)

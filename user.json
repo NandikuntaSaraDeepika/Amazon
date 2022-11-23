@@ -1,5 +1,5 @@
-{
-    "users":[
+db.user.insert(
+    [
       { 
       "id":"3000WK1",
       "name":"Deepika",
@@ -31,4 +31,4 @@
         "ph.no":"781412",
       },
     ]
-    }
+)

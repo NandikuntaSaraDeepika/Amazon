@@ -1,5 +1,5 @@
-{
-    "customeraddressess":[
+db.customeraddress.insert(
+    [
       { 
       "address":"143A",
       "city":"Rangareddy",
@@ -36,4 +36,4 @@
         "pincode":"500341",
       },
     ]
-    }
+)
