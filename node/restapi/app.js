@@ -60,10 +60,11 @@ app.get('/customerorder',(req,res)=>{
 //connection with db
 MongoClient.connect(mongoUrl,(err,client) => {
     if(err) console.log('Error while connecting');
-    db = client.db('Amazon');
+    db = client.db('amazonapi');
     app.listen(port,()=>{
         console.log(`Server is running on port ${port}`)
     })
 
 })
 
+// 
