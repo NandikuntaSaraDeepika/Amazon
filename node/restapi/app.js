@@ -58,6 +58,73 @@ app.get('/customerorder',(req,res)=>{
     })
 })
 
+
+// order
+app.get('/customerorder',(req,res)=>{
+    //let id = req.query.id
+    let id = req.query.id;
+    let query = {}
+    if(id){
+        //query={id:id}
+        query={id}
+    }else{
+        query={}
+    }
+    db.collection('order').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+//placeorder
+app.post('/menuItem',(req,res) => {
+    if(Array.isArray(req.body.id)){
+        db.collection('menu').find({menu_id:{$in:req.body.id}}).toArray((err,result) => {
+            if(err) throw err;
+            res.send(result)
+        })
+    }else{
+        res.send('Invalid Input')
+    }
+    
+})
+
+//placeorder
+app.post('/placeOrder',(req,res) => {
+    db.collection('orders').insert(req.body,(err,result) => {
+        if(err) throw err;
+        res.send('Order Placed')
+    })
+})
+
+//updateOrder
+app.put('/updateOrder/:id',(req,res) => {
+    let oid = Number(req.params.id);
+    db.collection('orders').updateOne(
+        {id:oid},
+        {
+            $set:{
+                "status":req.body.status,
+                "bank_name":req.body.bank_name,
+                "date":req.body.date
+            }
+        },(err,result) => {
+            if(err) throw err;
+            res.send('Order Updated')
+        }
+    )
+})
+
+
+//deleteOrder
+app.delete('/deleteOrder/:id',(req,res) => {
+    let _id = mongo.ObjectId(req.params.id);
+    db.collection('orders').remove({_id},(err,result) => {
+        if(err) throw err;
+        res.send('Order Deleted')
+    })
+})
+
 //connection with db
 MongoClient.connect(mongoUrl,(err,client) => {
     if(err) console.log('Error while connecting');
